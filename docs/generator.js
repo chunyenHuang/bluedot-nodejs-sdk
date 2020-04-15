@@ -12,6 +12,18 @@ const markdownStrings = [
 ];
 
 markdownStrings.push(`
+## GetStarted
+
+\`\`\`javascript
+const Bluedot = require('bluedot-nodejs-sdk');
+
+const bluedot new Bluedot({ email, password });
+
+const projects = await bluedot.api.getProjects();
+\`\`\`
+`);
+
+markdownStrings.push(`
 ## API Documentation for Bluedot V2 
 - https://config-docs.bluedot.io/  
 - https://docs.bluedot.io/config-api/  
@@ -21,15 +33,13 @@ Object.keys(bluedot.apiList)
     .filter((key) => key !== 'undefined')
     .forEach((key) => {
         markdownStrings.push(`### ${key}`);
-        bluedot.apiList[key].forEach(({ method, path, sample, url, summary, description }) => {
-            markdownStrings.push(`#### [${method}](${url})`);
+        bluedot.apiList[key].forEach(({ method, path, sample, url, summary }) => {
+            markdownStrings.push(`#### ${method}`);
             summary && markdownStrings.push(`${summary}  `);
-            description && markdownStrings.push(`${description}  `);
-
+            markdownStrings.push(`[${url}](${url})  `);
             markdownStrings.push(`
 \`\`\`javascript
 # ${path}
-
 ${sample}
 \`\`\`
             `);
