@@ -1,6 +1,7 @@
 # bluedot-nodejs-sdk
 
 [![npm version](https://badge.fury.io/js/bluedot-nodejs-sdk.svg)](https://badge.fury.io/js/bluedot-nodejs-sdk)
+![Node.js Package](https://github.com/chunyenHuang/bluedot-nodejs-sdk/workflows/Node.js%20Package/badge.svg)
 
 ## GetStarted
 
