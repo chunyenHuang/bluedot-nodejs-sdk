@@ -5,7 +5,7 @@
 ```javascript
 const Bluedot = require('bluedot-nodejs-sdk');
 
-const bluedot new Bluedot({ email, password });
+const bluedot = new Bluedot({ email, password });
 
 const projects = await bluedot.api.getProjects();
 ```
