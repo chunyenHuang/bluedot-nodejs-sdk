@@ -1,5 +1,7 @@
 # bluedot-nodejs-sdk
 
+[![npm version](https://badge.fury.io/js/bluedot-nodejs-sdk.svg)](https://badge.fury.io/js/bluedot-nodejs-sdk)
+
 ## GetStarted
 
 ```javascript
