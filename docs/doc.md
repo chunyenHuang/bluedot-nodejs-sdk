@@ -11,6 +11,9 @@ const Bluedot = require('bluedot-nodejs-sdk');
 const bluedot = new Bluedot({ email, password });
 
 const projects = await bluedot.api.getProjects();
+
+const zones = await bluedot.api.getZones({ projectId: PROJECT_ID, limit: 1000 });
+
 ```
 
 ## V1
