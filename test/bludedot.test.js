@@ -8,6 +8,9 @@ jest.setTimeout(30000);
 
 describe('Bluedot', () => {
     test('Simple test', async () => {
+        if (!EMAIL || !PASSWORD) {
+            return;
+        }
         const bluedot = new Bluedot({
             email: EMAIL,
             password: PASSWORD,
