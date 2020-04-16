@@ -10,6 +10,10 @@ const bluedot = new Bluedot({ email, password });
 const projects = await bluedot.api.getProjects();
 ```
 
+## V1
+For V1 please use the official guide:  
+https://github.com/Bluedot-Innovation/PublicAPI-Client-Node
+
 
 ## API Documentation for Bluedot V2 
 - https://config-docs.bluedot.io/  

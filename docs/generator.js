@@ -3,25 +3,15 @@ const path = require('path');
 
 const Bluedot = require('../lib/Bluedot');
 
+const basicDoc = fs.readFileSync(path.join(__dirname, 'doc.md'), 'utf8');
+
 const bluedot = new Bluedot({
     generateApiList: true,
 });
 
 const markdownStrings = [
-    '# bluedot-nodejs-sdk',
+    basicDoc,
 ];
-
-markdownStrings.push(`
-## GetStarted
-
-\`\`\`javascript
-const Bluedot = require('bluedot-nodejs-sdk');
-
-const bluedot = new Bluedot({ email, password });
-
-const projects = await bluedot.api.getProjects();
-\`\`\`
-`);
 
 markdownStrings.push(`
 ## API Documentation for Bluedot V2 
