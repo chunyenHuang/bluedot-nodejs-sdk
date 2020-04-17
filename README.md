@@ -31,7 +31,7 @@ Triggers a password reset token
 [https://config-docs.bluedot.io/#operation/createTokenRequest](https://config-docs.bluedot.io/#operation/createTokenRequest)  
 
 ```javascript
-# POST: /password/token-request
+// POST: /password/token-request
 const response = await bluedot.api.createTokenRequest(body);
 ```
             
@@ -40,7 +40,7 @@ Uses password reset token to change password
 [https://config-docs.bluedot.io/#operation/resetPassword](https://config-docs.bluedot.io/#operation/resetPassword)  
 
 ```javascript
-# POST: /password/token
+// POST: /password/token
 const response = await bluedot.api.resetPassword(body);
 ```
             
@@ -49,7 +49,7 @@ Uses the temporary password to change a newly created user's password
 [https://config-docs.bluedot.io/#operation/createNewPassword](https://config-docs.bluedot.io/#operation/createNewPassword)  
 
 ```javascript
-# POST: /password/new
+// POST: /password/new
 const response = await bluedot.api.createNewPassword(body);
 ```
             
@@ -59,7 +59,7 @@ Gets a list of all tags being used on zones by projectId
 [https://config-docs.bluedot.io/#operation/getTags](https://config-docs.bluedot.io/#operation/getTags)  
 
 ```javascript
-# GET: /tags
+// GET: /tags
 const response = await bluedot.api.getTags({ projectId });
 ```
             
@@ -69,7 +69,7 @@ Authenticates a user
 [https://config-docs.bluedot.io/#operation/createSession](https://config-docs.bluedot.io/#operation/createSession)  
 
 ```javascript
-# POST: /sessions
+// POST: /sessions
 const response = await bluedot.api.createSession(body);
 ```
             
@@ -78,7 +78,7 @@ Logs a user out
 [https://config-docs.bluedot.io/#operation/deleteSession](https://config-docs.bluedot.io/#operation/deleteSession)  
 
 ```javascript
-# DELETE: /sessions
+// DELETE: /sessions
 const response = await bluedot.api.deleteSession(body);
 ```
             
@@ -87,7 +87,7 @@ Refreshes a session
 [https://config-docs.bluedot.io/#operation/refreshSession](https://config-docs.bluedot.io/#operation/refreshSession)  
 
 ```javascript
-# PUT: /sessions
+// PUT: /sessions
 const response = await bluedot.api.refreshSession(body);
 ```
             
@@ -97,7 +97,7 @@ Adds a user
 [https://config-docs.bluedot.io/#operation/addUser](https://config-docs.bluedot.io/#operation/addUser)  
 
 ```javascript
-# POST: /users
+// POST: /users
 const response = await bluedot.api.addUser(body);
 ```
             
@@ -106,7 +106,7 @@ Gets all users
 [https://config-docs.bluedot.io/#operation/searchUsers](https://config-docs.bluedot.io/#operation/searchUsers)  
 
 ```javascript
-# GET: /users
+// GET: /users
 const response = await bluedot.api.searchUsers(query);
 ```
             
@@ -115,7 +115,7 @@ Updates a complete user
 [https://config-docs.bluedot.io/#operation/replaceUser](https://config-docs.bluedot.io/#operation/replaceUser)  
 
 ```javascript
-# PUT: /users/{userId}
+// PUT: /users/{userId}
 const response = await bluedot.api.replaceUser(userId, body);
 ```
             
@@ -124,7 +124,7 @@ Finds user by userId
 [https://config-docs.bluedot.io/#operation/getUserById](https://config-docs.bluedot.io/#operation/getUserById)  
 
 ```javascript
-# GET: /users/{userId}
+// GET: /users/{userId}
 const response = await bluedot.api.getUserById(userId);
 ```
             
@@ -133,7 +133,7 @@ Deletes a user
 [https://config-docs.bluedot.io/#operation/deleteUser](https://config-docs.bluedot.io/#operation/deleteUser)  
 
 ```javascript
-# DELETE: /users/{userId}
+// DELETE: /users/{userId}
 const response = await bluedot.api.deleteUser(userId);
 ```
             
@@ -142,7 +142,7 @@ Updates a user
 [https://config-docs.bluedot.io/#operation/updateUser](https://config-docs.bluedot.io/#operation/updateUser)  
 
 ```javascript
-# PATCH: /users/{userId}
+// PATCH: /users/{userId}
 const response = await bluedot.api.updateUser(userId, body);
 ```
             
@@ -152,7 +152,7 @@ Adds a project
 [https://config-docs.bluedot.io/#operation/addProject](https://config-docs.bluedot.io/#operation/addProject)  
 
 ```javascript
-# POST: /projects
+// POST: /projects
 const response = await bluedot.api.addProject(body);
 ```
             
@@ -161,7 +161,7 @@ Gets all projects by accountId
 [https://config-docs.bluedot.io/#operation/getProjects](https://config-docs.bluedot.io/#operation/getProjects)  
 
 ```javascript
-# GET: /projects
+// GET: /projects
 const response = await bluedot.api.getProjects(query);
 ```
             
@@ -170,7 +170,7 @@ Updates a complete project
 [https://config-docs.bluedot.io/#operation/replaceProject](https://config-docs.bluedot.io/#operation/replaceProject)  
 
 ```javascript
-# PUT: /projects/{projectId}
+// PUT: /projects/{projectId}
 const response = await bluedot.api.replaceProject(projectId, body);
 ```
             
@@ -179,7 +179,7 @@ Finds project by ID
 [https://config-docs.bluedot.io/#operation/getProjectById](https://config-docs.bluedot.io/#operation/getProjectById)  
 
 ```javascript
-# GET: /projects/{projectId}
+// GET: /projects/{projectId}
 const response = await bluedot.api.getProjectById(projectId);
 ```
             
@@ -188,7 +188,7 @@ Deletes a project
 [https://config-docs.bluedot.io/#operation/deleteProject](https://config-docs.bluedot.io/#operation/deleteProject)  
 
 ```javascript
-# DELETE: /projects/{projectId}
+// DELETE: /projects/{projectId}
 const response = await bluedot.api.deleteProject(projectId);
 ```
             
@@ -197,7 +197,7 @@ Updates an project
 [https://config-docs.bluedot.io/#operation/updateProject](https://config-docs.bluedot.io/#operation/updateProject)  
 
 ```javascript
-# PATCH: /projects/{projectId}
+// PATCH: /projects/{projectId}
 const response = await bluedot.api.updateProject(projectId, body);
 ```
             
@@ -207,7 +207,7 @@ Adds a zone to the project
 [https://config-docs.bluedot.io/#operation/addZone](https://config-docs.bluedot.io/#operation/addZone)  
 
 ```javascript
-# POST: /zones
+// POST: /zones
 const response = await bluedot.api.addZone(body);
 ```
             
@@ -216,7 +216,7 @@ Gets all zones by project Id
 [https://config-docs.bluedot.io/#operation/getZones](https://config-docs.bluedot.io/#operation/getZones)  
 
 ```javascript
-# GET: /zones
+// GET: /zones
 const response = await bluedot.api.getZones({ projectId });
 ```
             
@@ -225,7 +225,7 @@ Replaces a zone
 [https://config-docs.bluedot.io/#operation/replaceZone](https://config-docs.bluedot.io/#operation/replaceZone)  
 
 ```javascript
-# PUT: /zones/{zoneId}
+// PUT: /zones/{zoneId}
 const response = await bluedot.api.replaceZone(zoneId, body);
 ```
             
@@ -234,7 +234,7 @@ Finds a zone by zoneId
 [https://config-docs.bluedot.io/#operation/getZoneById](https://config-docs.bluedot.io/#operation/getZoneById)  
 
 ```javascript
-# GET: /zones/{zoneId}
+// GET: /zones/{zoneId}
 const response = await bluedot.api.getZoneById(zoneId);
 ```
             
@@ -243,7 +243,7 @@ Deletes a zone
 [https://config-docs.bluedot.io/#operation/deleteZone](https://config-docs.bluedot.io/#operation/deleteZone)  
 
 ```javascript
-# DELETE: /zones/{zoneId}
+// DELETE: /zones/{zoneId}
 const response = await bluedot.api.deleteZone(zoneId);
 ```
             
@@ -252,7 +252,7 @@ Updates a zone
 [https://config-docs.bluedot.io/#operation/updateZone](https://config-docs.bluedot.io/#operation/updateZone)  
 
 ```javascript
-# PATCH: /zones/{zoneId}
+// PATCH: /zones/{zoneId}
 const response = await bluedot.api.updateZone(zoneId, body);
 ```
             
@@ -261,7 +261,7 @@ Gets zone clusters by project Id
 [https://config-docs.bluedot.io/#operation/getZoneClusters](https://config-docs.bluedot.io/#operation/getZoneClusters)  
 
 ```javascript
-# GET: /zones/clusters
+// GET: /zones/clusters
 const response = await bluedot.api.getZoneClusters({ projectId, northeast, southwest });
 ```
             
@@ -270,7 +270,7 @@ Gets zones count per project Id
 [https://config-docs.bluedot.io/#operation/getZonesCount](https://config-docs.bluedot.io/#operation/getZonesCount)  
 
 ```javascript
-# GET: /zones/count
+// GET: /zones/count
 const response = await bluedot.api.getZonesCount({ projectId });
 ```
             
@@ -280,7 +280,7 @@ Adds a beacon
 [https://config-docs.bluedot.io/#operation/addBeacon](https://config-docs.bluedot.io/#operation/addBeacon)  
 
 ```javascript
-# POST: /beacons
+// POST: /beacons
 const response = await bluedot.api.addBeacon(body);
 ```
             
@@ -289,7 +289,7 @@ Gets all beacons by account
 [https://config-docs.bluedot.io/#operation/getBeacons](https://config-docs.bluedot.io/#operation/getBeacons)  
 
 ```javascript
-# GET: /beacons
+// GET: /beacons
 const response = await bluedot.api.getBeacons(query);
 ```
             
@@ -298,7 +298,7 @@ Finds a beacon by beaconId
 [https://config-docs.bluedot.io/#operation/getBeaconById](https://config-docs.bluedot.io/#operation/getBeaconById)  
 
 ```javascript
-# GET: /beacons/{beaconId}
+// GET: /beacons/{beaconId}
 const response = await bluedot.api.getBeaconById(beaconId);
 ```
             
@@ -307,7 +307,7 @@ Deletes a beacon
 [https://config-docs.bluedot.io/#operation/deleteBeacon](https://config-docs.bluedot.io/#operation/deleteBeacon)  
 
 ```javascript
-# DELETE: /beacons/{beaconId}
+// DELETE: /beacons/{beaconId}
 const response = await bluedot.api.deleteBeacon(beaconId);
 ```
             
@@ -316,7 +316,7 @@ Updates a complete beacon
 [https://config-docs.bluedot.io/#operation/replaceBeacon](https://config-docs.bluedot.io/#operation/replaceBeacon)  
 
 ```javascript
-# PUT: /beacons/{beaconId}
+// PUT: /beacons/{beaconId}
 const response = await bluedot.api.replaceBeacon(beaconId, body);
 ```
             
@@ -325,11 +325,7 @@ Updates a beacon
 [https://config-docs.bluedot.io/#operation/updateBeacon](https://config-docs.bluedot.io/#operation/updateBeacon)  
 
 ```javascript
-# PATCH: /beacons/{beaconId}
+// PATCH: /beacons/{beaconId}
 const response = await bluedot.api.updateBeacon(beaconId, body);
 ```
             
-
-## V1
-For V1 please use the official guide:  
-https://github.com/Bluedot-Innovation/PublicAPI-Client-Node

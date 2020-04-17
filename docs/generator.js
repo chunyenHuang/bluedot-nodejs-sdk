@@ -29,17 +29,11 @@ Object.keys(bluedot.apiList)
             markdownStrings.push(`[${url}](${url})  `);
             markdownStrings.push(`
 \`\`\`javascript
-# ${path}
+// ${path}
 ${sample}
 \`\`\`
             `);
         });
     });
-
-markdownStrings.push(`
-## V1
-For V1 please use the official guide:  
-https://github.com/Bluedot-Innovation/PublicAPI-Client-Node
-`);
 
 fs.writeFileSync(path.join(__dirname, '../README.md'), markdownStrings.join('\r\n'), 'utf8');
