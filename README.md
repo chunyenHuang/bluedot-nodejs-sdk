@@ -32,7 +32,7 @@ Triggers a password reset token
 
 ```javascript
 # POST: /password/token-request
-const respone = await bluedot.api.createTokenRequest(body);
+const response = await bluedot.api.createTokenRequest(body);
 ```
             
 #### resetPassword
@@ -41,7 +41,7 @@ Uses password reset token to change password
 
 ```javascript
 # POST: /password/token
-const respone = await bluedot.api.resetPassword(body);
+const response = await bluedot.api.resetPassword(body);
 ```
             
 #### createNewPassword
@@ -50,7 +50,7 @@ Uses the temporary password to change a newly created user's password
 
 ```javascript
 # POST: /password/new
-const respone = await bluedot.api.createNewPassword(body);
+const response = await bluedot.api.createNewPassword(body);
 ```
             
 ### tags
@@ -60,7 +60,7 @@ Gets a list of all tags being used on zones by projectId
 
 ```javascript
 # GET: /tags
-const respone = await bluedot.api.getTags({ projectId });
+const response = await bluedot.api.getTags({ projectId });
 ```
             
 ### sessions
@@ -70,7 +70,7 @@ Authenticates a user
 
 ```javascript
 # POST: /sessions
-const respone = await bluedot.api.createSession(body);
+const response = await bluedot.api.createSession(body);
 ```
             
 #### deleteSession
@@ -79,7 +79,7 @@ Logs a user out
 
 ```javascript
 # DELETE: /sessions
-const respone = await bluedot.api.deleteSession(body);
+const response = await bluedot.api.deleteSession(body);
 ```
             
 #### refreshSession
@@ -88,7 +88,7 @@ Refreshes a session
 
 ```javascript
 # PUT: /sessions
-const respone = await bluedot.api.refreshSession(body);
+const response = await bluedot.api.refreshSession(body);
 ```
             
 ### users
@@ -98,7 +98,7 @@ Adds a user
 
 ```javascript
 # POST: /users
-const respone = await bluedot.api.addUser(body);
+const response = await bluedot.api.addUser(body);
 ```
             
 #### searchUsers
@@ -107,7 +107,7 @@ Gets all users
 
 ```javascript
 # GET: /users
-const respone = await bluedot.api.searchUsers(query);
+const response = await bluedot.api.searchUsers(query);
 ```
             
 #### replaceUser
@@ -116,7 +116,7 @@ Updates a complete user
 
 ```javascript
 # PUT: /users/{userId}
-const respone = await bluedot.api.replaceUser(userId, body);
+const response = await bluedot.api.replaceUser(userId, body);
 ```
             
 #### getUserById
@@ -125,7 +125,7 @@ Finds user by userId
 
 ```javascript
 # GET: /users/{userId}
-const respone = await bluedot.api.getUserById(userId);
+const response = await bluedot.api.getUserById(userId);
 ```
             
 #### deleteUser
@@ -134,7 +134,7 @@ Deletes a user
 
 ```javascript
 # DELETE: /users/{userId}
-const respone = await bluedot.api.deleteUser(userId);
+const response = await bluedot.api.deleteUser(userId);
 ```
             
 #### updateUser
@@ -143,7 +143,7 @@ Updates a user
 
 ```javascript
 # PATCH: /users/{userId}
-const respone = await bluedot.api.updateUser(userId, body);
+const response = await bluedot.api.updateUser(userId, body);
 ```
             
 ### projects
@@ -153,7 +153,7 @@ Adds a project
 
 ```javascript
 # POST: /projects
-const respone = await bluedot.api.addProject(body);
+const response = await bluedot.api.addProject(body);
 ```
             
 #### getProjects
@@ -162,7 +162,7 @@ Gets all projects by accountId
 
 ```javascript
 # GET: /projects
-const respone = await bluedot.api.getProjects(query);
+const response = await bluedot.api.getProjects(query);
 ```
             
 #### replaceProject
@@ -171,7 +171,7 @@ Updates a complete project
 
 ```javascript
 # PUT: /projects/{projectId}
-const respone = await bluedot.api.replaceProject(projectId, body);
+const response = await bluedot.api.replaceProject(projectId, body);
 ```
             
 #### getProjectById
@@ -180,7 +180,7 @@ Finds project by ID
 
 ```javascript
 # GET: /projects/{projectId}
-const respone = await bluedot.api.getProjectById(projectId);
+const response = await bluedot.api.getProjectById(projectId);
 ```
             
 #### deleteProject
@@ -189,7 +189,7 @@ Deletes a project
 
 ```javascript
 # DELETE: /projects/{projectId}
-const respone = await bluedot.api.deleteProject(projectId);
+const response = await bluedot.api.deleteProject(projectId);
 ```
             
 #### updateProject
@@ -198,7 +198,7 @@ Updates an project
 
 ```javascript
 # PATCH: /projects/{projectId}
-const respone = await bluedot.api.updateProject(projectId, body);
+const response = await bluedot.api.updateProject(projectId, body);
 ```
             
 ### zones
@@ -208,7 +208,7 @@ Adds a zone to the project
 
 ```javascript
 # POST: /zones
-const respone = await bluedot.api.addZone(body);
+const response = await bluedot.api.addZone(body);
 ```
             
 #### getZones
@@ -217,7 +217,7 @@ Gets all zones by project Id
 
 ```javascript
 # GET: /zones
-const respone = await bluedot.api.getZones({ projectId });
+const response = await bluedot.api.getZones({ projectId });
 ```
             
 #### replaceZone
@@ -226,7 +226,7 @@ Replaces a zone
 
 ```javascript
 # PUT: /zones/{zoneId}
-const respone = await bluedot.api.replaceZone(zoneId, body);
+const response = await bluedot.api.replaceZone(zoneId, body);
 ```
             
 #### getZoneById
@@ -235,7 +235,7 @@ Finds a zone by zoneId
 
 ```javascript
 # GET: /zones/{zoneId}
-const respone = await bluedot.api.getZoneById(zoneId);
+const response = await bluedot.api.getZoneById(zoneId);
 ```
             
 #### deleteZone
@@ -244,7 +244,7 @@ Deletes a zone
 
 ```javascript
 # DELETE: /zones/{zoneId}
-const respone = await bluedot.api.deleteZone(zoneId);
+const response = await bluedot.api.deleteZone(zoneId);
 ```
             
 #### updateZone
@@ -253,7 +253,7 @@ Updates a zone
 
 ```javascript
 # PATCH: /zones/{zoneId}
-const respone = await bluedot.api.updateZone(zoneId, body);
+const response = await bluedot.api.updateZone(zoneId, body);
 ```
             
 #### getZoneClusters
@@ -262,7 +262,7 @@ Gets zone clusters by project Id
 
 ```javascript
 # GET: /zones/clusters
-const respone = await bluedot.api.getZoneClusters({ projectId, northeast, southwest });
+const response = await bluedot.api.getZoneClusters({ projectId, northeast, southwest });
 ```
             
 #### getZonesCount
@@ -271,7 +271,7 @@ Gets zones count per project Id
 
 ```javascript
 # GET: /zones/count
-const respone = await bluedot.api.getZonesCount({ projectId });
+const response = await bluedot.api.getZonesCount({ projectId });
 ```
             
 ### beacons
@@ -281,7 +281,7 @@ Adds a beacon
 
 ```javascript
 # POST: /beacons
-const respone = await bluedot.api.addBeacon(body);
+const response = await bluedot.api.addBeacon(body);
 ```
             
 #### getBeacons
@@ -290,7 +290,7 @@ Gets all beacons by account
 
 ```javascript
 # GET: /beacons
-const respone = await bluedot.api.getBeacons(query);
+const response = await bluedot.api.getBeacons(query);
 ```
             
 #### getBeaconById
@@ -299,7 +299,7 @@ Finds a beacon by beaconId
 
 ```javascript
 # GET: /beacons/{beaconId}
-const respone = await bluedot.api.getBeaconById(beaconId);
+const response = await bluedot.api.getBeaconById(beaconId);
 ```
             
 #### deleteBeacon
@@ -308,7 +308,7 @@ Deletes a beacon
 
 ```javascript
 # DELETE: /beacons/{beaconId}
-const respone = await bluedot.api.deleteBeacon(beaconId);
+const response = await bluedot.api.deleteBeacon(beaconId);
 ```
             
 #### replaceBeacon
@@ -317,7 +317,7 @@ Updates a complete beacon
 
 ```javascript
 # PUT: /beacons/{beaconId}
-const respone = await bluedot.api.replaceBeacon(beaconId, body);
+const response = await bluedot.api.replaceBeacon(beaconId, body);
 ```
             
 #### updateBeacon
@@ -326,7 +326,7 @@ Updates a beacon
 
 ```javascript
 # PATCH: /beacons/{beaconId}
-const respone = await bluedot.api.updateBeacon(beaconId, body);
+const response = await bluedot.api.updateBeacon(beaconId, body);
 ```
             
 
