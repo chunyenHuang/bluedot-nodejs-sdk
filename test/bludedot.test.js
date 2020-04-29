@@ -28,7 +28,14 @@ describe('Bluedot', () => {
         });
         expect(Array.isArray(zones)).toEqual(true);
 
-        const zone = await bluedot.api.getZoneById(zones[0]._id);
-        expect(typeof zone).toEqual('object');
+        const testZones = zones.filter((x, index) => index < 5);
+
+        await Promise.all(
+            testZones.map(async ({ _id }) => {
+                const zone = await bluedot.api.getZoneById(_id);
+                expect(typeof zone).toEqual('object');
+                expect(zone._id).toEqual(_id);
+            }),
+        );
     });
 });
